@@ -1,0 +1,14 @@
+<!-- 
+
+
+
+
+
+Messagefromchild: {{message}}
+<app-child  #childtemp (messageEvent)="receiveMessage($event)" [childmessage]="parentmessage" 
+(messageEvent)="receiveMessage($event)"></app-child>
+<h2>{{childtemp.message}}</h2>
+<button (click)='childtemp.changemessage(message)'>click to call function of child component</button>
+
+
+ -->

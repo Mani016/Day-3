@@ -5,14 +5,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-  message:string;
-   receiveMessage($event: string) {
+  name:string='';    // This message will show in child
+  message:number; 
+  receiveMessage($event:number) {    //This will receive data from child when event being hit from child 
     this.message = $event
-   }
-   parentmessage:string="Hello I am a string variable from parent component and want to say HELLO to the child component"
-  
-  constructor() {}
-
+  }
   ngOnInit() {
   }
 }

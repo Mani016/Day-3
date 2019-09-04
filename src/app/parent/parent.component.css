@@ -1,0 +1,26 @@
+.parent-container {
+    background: #303036;
+    color: #FFFAFF;
+    padding: 25px;
+  }
+  
+  .btn {
+    border: 1px solid #FC5130;
+    background: none;
+    color: #FC5130;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .btn:hover {
+    background: #FC5130;
+    color: #303036;
+    cursor: pointer;
+  }
+  #app-child{
+      
+      background:yellowgreen;
+      color: #FFFAFF;
+      padding: 15px;
+    
+  }

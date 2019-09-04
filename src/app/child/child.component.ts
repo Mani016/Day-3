@@ -1,29 +1,39 @@
-import { Component, OnInit, Input, Output, EventEmitter, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
    styleUrls: ['./child.component.css']
 })
 export class ChildComponent  {
-  @Input()  childmessage : string;
-  message: string = "Hello I am From Child Component Hello to the Parent Component"
-  @Output() messageEvent = new EventEmitter<string>();
-  constructor() { 
-  }
-  sendMessage() {
-    this.messageEvent.emit(this.message)
-  }
-  mmessage ="I am message variable in child component";
-  changemessage(){
-    
-   this.mmessage ="I am clicked from parent component to change the message in child component"
-  }
-
-
+  @Input()  childmessage : string;      //This input decorator will take this message from parent
+  sum:number = 2+2 
+   @Output() messageEvent = new EventEmitter<number>();
+           
+  // This Output decorator will take this message to the parent
+   constructor() { 
+ }
+   SUM() {        
+    this.messageEvent.emit(this.sum)
+      }
+   data =" Data: I am data in child component";
+   changedata(){
+    this.data ="On clicking from parent component child changedata() function triggered and changes the Data"
+   }
+ 
+  
   ngOnInit() {
   }
 }
+//  sub:number = 5-5
  
+ 
+ 
+
+//    SUB(){
+//     this.messageEvent.emit(this.sub)
+//    }
+   
+
 
 
 

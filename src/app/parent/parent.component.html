@@ -1,14 +1,17 @@
-<!-- 
-
-
-
-
-
-Messagefromchild: {{message}}
-<app-child  #childtemp (messageEvent)="receiveMessage($event)" [childmessage]="parentmessage" 
-(messageEvent)="receiveMessage($event)"></app-child>
-<h2>{{childtemp.message}}</h2>
-<button (click)='childtemp.changemessage(message)'>click to call function of child component</button>
-
-
- -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+<div class="parent-container">
+    <h3>PARENT COMPONENT</h3>
+    <textarea rows="4" cols="50" type="text" [(ngModel)]='name' placeholder="Enter text that will be shown in child component"></textarea>
+    <h3>SumByChild:</h3> 2+2={{message}}<br><br>
+    <button (click)='childtemp.changedata(message)'>click to call function of child component</button>
+  </div>
+</div>
+<div class="col-sm-6" id="app-child">
+    <app-child [childmessage]="name"  (messageEvent)="receiveMessage($event)"  #childtemp></app-child>
+    <h2 style="color: black">{{childtemp.data}}</h2> 
+</div>
+</div>
+</div>
+  
